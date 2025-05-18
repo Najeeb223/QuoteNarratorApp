@@ -65,4 +65,38 @@ Example Code
 const exampleFunction = () => {
   // code goes here
 }
+
+ Arrow function with parameter e.g:
+ Just like regular functions, arrow functions can accept multiple parameters.
+
+Here is an example of a named arrow function with one parameter:
+
+Example Code
+const greet = (name) => {
+  console.log(`Hello, ${name}!`);
+};
+If the function only has one parameter, you can omit the parentheses around the parameter list like this:
+
+Example Code
+const greet = name => {
+  console.log(`Hello, ${name}!`);
+};
+If the arrow function is returning a simple expression, you can omit the return keyword and the curly braces {}. This is called an implicit return.
+
+Example Code
+const multiplyTwoNumbers = (num1, num2) => num1 * num2;
+If your arrow function has multiple lines of code in the function body, then you need to use the return keyword and the curly braces {}.
+
+Example Code
+const getTax = (price) => {
+  const taxRate = 0.08;
+  const tax = price * taxRate;
+  return tax;
+};
 */
+
+const renderQuotes = array => {
+
+  const quotesHTML = array.map();
+
+}
