@@ -93,10 +93,41 @@ const getTax = (price) => {
   const tax = price * taxRate;
   return tax;
 };
+
+The map() method is used to iterate through an array and return a new array. It's helpful when you want to create a new array based on the values of an existing array. For example:
+
+Example Code
+const numbers = [1, 2, 3];
+const doubledNumbers = numbers.map((number) => number * 2); // doubledNumbers will be [2, 4, 6]
+Notice that the map() method takes a function as an argument. 
+This is called a callback function, which is a function that is passed to another function as an argument. 
+In the example above, the callback function is (number) => number * 2, and it's run on each element in the numbers array. 
+The map() method then returns a new array with the results.
 */
 
+/*
+  join() method notes with e.g:
+  The join() method is used to concatenate all the elements of an array into a single string. 
+  It takes an optional parameter called a separator which is used to separate each element of the array. For example:
+
+  Example Code
+  const exampleArr = ["This", "is", "a", "sentence"];
+  const sentence = exampleArr.join(" "); // Separator takes a space character
+  console.log(sentence); // Output: "This is a sentence"
+
+*/
 const renderQuotes = array => {
 
-  const quotesHTML = array.map();
+  const quotesHTML = array.map((quote)=> {
 
-}
+    return `
+      <li id="quote-${quote.id}" class="playlist-quote">
+      <button class="playlist-quote-info"><span class="playlist-quote-title">${quote.title}</span></button>
+      <span class="playlist-quote-artist">${quote.coach}</span>
+      <span class="playlist-quote-duration">${quote.duration}</span>
+      <button class="playlist-quote-delete" aria-label="Delete ${song.title}"></button>
+      </li>
+      `;
+  }).join("");
+    playlistQuotes.innerHTML = quotesHTML; 
+};
